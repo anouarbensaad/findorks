@@ -17,10 +17,10 @@ def parse_args():
         parser = argparse.ArgumentParser(epilog='\tExample: \r\npython ' + sys.argv[0] + " -u google.com")
         parser.error = parser_error
         parser._optionals.title = "\nOPTIONS"
-        parser.add_argument('-D', '--dorks', help='search webs with dorks', dest='dorks' , type=str)
-        parser.add_argument('-o', '--output', help='specify output directory',required=False)
-        parser.add_argument('-n', '--number-pages', help='search dorks number page limit', dest='numberpage' , type=int)
-        parser.add_argument('-l','--dork-list', help='list names of dorks exploits',dest='dorkslist',
+        parser.add_argument('--dorks', help='search webs with dorks', dest='dorks' , type=str)
+        parser.add_argument('--output', help='specify output directory',required=False)
+        parser.add_argument('--nump', help='search dorks number page limit', dest='numberpage' , type=int)
+        parser.add_argument('--dorkls', help='list names of dorks exploits',dest='dorkslist',
                 choices=['wordpress', 'prestashop','joomla','lokomedia','drupal','all']) 
         return parser.parse_args()
 
